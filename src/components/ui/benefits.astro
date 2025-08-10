@@ -1,0 +1,109 @@
+---
+import { CircleCheckBig, Trophy } from "@lucide/astro";
+import Badge from "./badge.astro";
+---
+
+<section id="beneficios" class="w-full py-12 md:py-20 border-b">
+    <div class="container mx-auto space-y-8 px-4">
+        <div class="text-center mb-16">
+            <Badge class="mb-4">
+                <Trophy size={16} color="currentColor" stroke-width={1} /> Beneficios
+                de trabajar con Securaq
+            </Badge>
+            <h3 class="text-4xl font-bold text-primary mb-4">
+                Beneficios garantizados y validados
+            </h3>
+            <p class="text-xl text-muted-foreground max-w-2xl mx-auto">
+                Un enfoque integral para entregar software confiable que aporte
+                valor medible desde el primer incremento.
+            </p>
+        </div>
+        <div class="grid gap-6 md:grid-cols-2">
+            <ul class="grid gap-4">
+                <li class="flex items-start gap-3 rounded-xl border p-4">
+                    <CircleCheckBig
+                        class="mt-0.5 h-5 w-5 text-emerald-600"
+                        aria-hidden="true"
+                    />
+                    <div>
+                        <h3 class="font-medium">Alineación con objetivos</h3>
+                        <p class="text-sm text-muted-foreground">
+                            Requisitos priorizados por impacto y factibilidad,
+                            con trazabilidad desde la necesidad hasta la
+                            entrega.
+                        </p>
+                    </div>
+                </li>
+                <li class="flex items-start gap-3 rounded-xl border p-4">
+                    <CircleCheckBig
+                        class="mt-0.5 h-5 w-5 text-emerald-600"
+                        aria-hidden="true"
+                    />
+                    <div>
+                        <h3 class="font-medium">Calidad y robustez</h3>
+                        <p class="text-sm text-muted-foreground">
+                            Pruebas automatizadas, estándares de código y
+                            revisión sistemática para reducir defectos y costos
+                            de mantenimiento.
+                        </p>
+                    </div>
+                </li>
+                <li class="flex items-start gap-3 rounded-xl border p-4">
+                    <CircleCheckBig
+                        class="mt-0.5 h-5 w-5 text-emerald-600"
+                        aria-hidden="true"
+                    />
+                    <div>
+                        <h3 class="font-medium">Seguridad incorporada</h3>
+                        <p class="text-sm text-muted-foreground">
+                            Prácticas seguras en datos, autenticación y
+                            autorización, con atención a amenazas y
+                            cumplimiento.
+                        </p>
+                    </div>
+                </li>
+            </ul>
+            <ul class="grid gap-4">
+                <li class="flex items-start gap-3 rounded-xl border p-4">
+                    <CircleCheckBig
+                        class="mt-0.5 h-5 w-5 text-emerald-600"
+                        aria-hidden="true"
+                    />
+                    <div>
+                        <h3 class="font-medium">Entrega predecible</h3>
+                        <p class="text-sm text-muted-foreground">
+                            Iteraciones cortas, roadmap visible y métricas de
+                            progreso para una gestión transparente del alcance.
+                        </p>
+                    </div>
+                </li>
+                <li class="flex items-start gap-3 rounded-xl border p-4">
+                    <CircleCheckBig
+                        class="mt-0.5 h-5 w-5 text-emerald-600"
+                        aria-hidden="true"
+                    />
+                    <div>
+                        <h3 class="font-medium">Escalabilidad y desempeño</h3>
+                        <p class="text-sm text-muted-foreground">
+                            Arquitecturas elásticas y observables preparadas
+                            para crecimiento y variaciones de demanda.
+                        </p>
+                    </div>
+                </li>
+                <li class="flex items-start gap-3 rounded-xl border p-4">
+                    <CircleCheckBig
+                        class="mt-0.5 h-5 w-5 text-emerald-600"
+                        aria-hidden="true"
+                    />
+                    <div>
+                        <h3 class="font-medium">Propiedad y documentación</h3>
+                        <p class="text-sm text-muted-foreground">
+                            Entrega de código, documentación y handover
+                            estructurado para independencia operativa.
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>

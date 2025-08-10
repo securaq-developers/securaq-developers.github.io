@@ -1,0 +1,96 @@
+---
+import {
+    CloudCog,
+    Code,
+    Gauge,
+    GraduationCap,
+    Laptop,
+    Layers,
+    RefreshCcw,
+    Wrench,
+    WrenchIcon,
+} from "@lucide/astro";
+import Badge from "./badge.astro";
+import { Card } from "./card";
+
+const services = [
+    {
+        icon: Code,
+        title: "Desarrollo de software personalizado",
+        description:
+            "Soluciones a medida que se adaptan perfectamente a las necesidades específicas de tu negocio.",
+    },
+    {
+        icon: Layers,
+        title: "Aplicaciones web y APIs",
+        description:
+            "Diseño y desarrollo de aplicaciones modernas y APIs REST/GraphQL con énfasis en rendimiento y mantenibilidad.",
+    },
+    {
+        icon: Gauge,
+        title: "Sistemas de medición",
+        description:
+            "Herramientas avanzadas para el monitoreo y análisis de datos en tiempo real.",
+    },
+    {
+        icon: CloudCog,
+        title: "Arquitectura cloud y DevOps",
+        description:
+            "Infraestructura como código, CI/CD y observabilidad para despliegues reproducibles y seguros.",
+    },
+    {
+        icon: RefreshCcw,
+        title: "Modernización de legados",
+        description:
+            "Refactorización, migraciones y re-arquitectura progresiva para reducir deuda técnica y riesgos.",
+    },
+    {
+        icon: GraduationCap,
+        title: "Apoyo en proyectos académicos",
+        description: "Asesoría especializada para estudiantes universitarios.",
+    },
+];
+---
+
+<section id="servicios" class="px-6 w-full border-b py-12 md:py-20 bg-muted">
+    <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-16">
+            <Badge class="mb-4">
+                <WrenchIcon size={16} color="currentColor" stroke-width={1} /> Nuestros
+                servicios
+            </Badge>
+            <h3 class="text-4xl font-bold text-primary mb-4">
+                Soluciones tecnológicas completas
+            </h3>
+            <p class="text-xl text-muted-foreground max-w-2xl mx-auto">
+                Ofrecemos un amplio rango de servicios de desarrollo para cubrir
+                todas tus necesidades tecnológicas.
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+            {
+                services.map((service, index) => (
+                    <Card
+                        key={index}
+                        className="p-6 hover:shadow-lg transition-all duration-300 border-0 shadow-md bg-gradient-to-br from-white to-gray-50"
+                    >
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-primary/10 p-3 rounded-lg text-primary flex-shrink-0">
+                                <service.icon class="h-8 w-8" />
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-primary mb-2">
+                                    {service.title}
+                                </h4>
+                                <p class="text-muted-foreground text-sm leading-relaxed">
+                                    {service.description}
+                                </p>
+                            </div>
+                        </div>
+                    </Card>
+                ))
+            }
+        </div>
+    </div>
+</section>
